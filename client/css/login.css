@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background-image: url(./Sunset\ over\ snowy\ slopes\ and\ trees.png);
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  z-index: -1;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+}
+main #bro {
+  width: 25rem;
+  height: 50rem;
+  background: transparent;
+  height: 30rem;
+  width: 50rem;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  margin-left: 10rem;
+  position: relative;
+  font: bold;
+  filter: blur(none);
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+  border-radius: 3rem;
+}
+main #box {
+  height: 30rem;
+  width: 30rem;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  gap: 1rem;
+  margin-right: 10rem;
+  margin-top: 5rem;
+  position: relative;
+  font: bold;
+  filter: blur(none);
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 3rem;
+  box-shadow: 12px 12px 35px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+main #box div:not(#icon):not(#check) {
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+}
+main #box div:not(#icon):not(#check) input {
+  height: 2.5rem;
+  font-size: 18px;
+  width: 25rem;
+  border-radius: 0.3rem;
+  background: linear-gradient(95deg, transparent, whitesmoke, transparent);
+  color: rgb(0, 0, 0);
+  padding-left: 0.3rem;
+  font-weight: bold;
+}
+main #box #check {
+  display: flex;
+  flex-direction: row;
+}
+main #box #check input {
+  height: 1.5rem;
+  font-size: 8px;
+  width: 2.5rem;
+  border-radius: 0.3rem;
+}
+main #box button {
+  width: 8rem;
+  padding: 14px 0;
+  background: linear-gradient(135deg, #ff3d00, #ff6a00);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+main #box button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.95);
+}
+main #box button:active {
+  transform: scale(0.97);
+}
+main .insta {
+  font-size: 50px;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .insta:hover {
+  scale: 0.95;
+}
+main #icon {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: row;
+}
+main #icon img {
+  border-radius: 0.6rem;
+}
+main #icon img:hover {
+  scale: 1.05;
+}
+main #box:hover {
+  transform: translateY(-4px) scale(1.005);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
+}

@@ -2,13 +2,35 @@
 <html>
 <head>
   <title>Signup</title>
+  <link rel="stylesheet" href="css/sinup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-  <h2>Signup</h2>
-  <input id="name" placeholder="Name"><br>
-  <input id="email" placeholder="Email"><br>
-  <input id="password" type="password" placeholder="Password"><br>
-  <button onclick="signup()">Signup</button>
+<body> <div class="bg"></div>
+<main>
+  <div id="bro"><h1 style="text-align: center;">WELCOME <br> BACK</h1></div>
+  <div id="box">
+
+    <h2>Signup</h2>
+ <div>
+   <label for="name">Name</label>
+   <input id="name"  type="text" placeholder="Name">
+ </div>
+   <div>
+      <label for="email">Email Address</label>
+      <input id="email" type="email" placeholder="  Enter Email Address">
+    </div>
+   <div>
+      <label for="password">Enter Password</label>
+      <input id="password" type="password" placeholder="  Enter Password"></div>
+  <button onclick="signup()">Sign-up</button><br>
+
+   <div id="icon"> <a href="https://www.instagram.com/piyush_v08?igsh=b3Y3YmdmMjcxenM1"  target="_blank"><i class="fa-brands fa-instagram insta"></i></a>
+    <a href="https://github.com/piyush9770" target="_blank">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40">
+  </a></div>
+  </div>
+
+</main>
 
   <script src="js/auth.js"></script>
 </body>
