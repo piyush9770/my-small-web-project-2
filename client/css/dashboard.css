@@ -1,0 +1,145 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+  color: #e5e7eb;
+}
+
+/* ================= BACKGROUND ================= */
+/* ================= BACKGROUND WITH BLUR ================= */
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #e5e7eb;
+  padding: 1.5rem;
+  overflow-x: hidden;
+}
+
+/* background layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: url("./night-coding-workspace.jpg") no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(8px) scale(1.05); /* 🔥 actual blur */
+}
+
+/* dark overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.35); /* transparency control */
+}
+
+/* ================= HEADER ================= */
+#hed {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#hed h2 {
+  margin-right: auto;
+  font-size: 1.6rem;
+  color: #f8fafc;
+}
+
+#hed a,
+#hed button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+}
+
+#hed a {
+  text-decoration: none;
+}
+
+#hed button {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+/* ================= IDEA LIST ================= */
+#myIdeaList {
+  margin-top: 1rem;
+}
+
+/* ================= CARD ================= */
+#myIdeaList > div {
+  background: rgba(15, 23, 42, 0.78);
+  border-radius: 14px;
+  padding: 1.4rem;
+  margin-bottom: 1.6rem;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#myIdeaList > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.85);
+}
+
+/* ================= TEXT ================= */
+#myIdeaList h4 {
+  margin-bottom: 0.4rem;
+  color: #f8fafc;
+}
+
+#myIdeaList p {
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
+
+#myIdeaList b {
+  color: #93c5fd;
+}
+
+/* ================= STATUS COLORS ================= */
+.status-approved {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #facc15;
+  font-weight: bold;
+}
+
+/* ================= LINK ================= */
+#myIdeaList a {
+  color: #38bdf8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#myIdeaList a:hover {
+  text-decoration: underline;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  #hed {
+    flex-wrap: wrap;
+  }
+}

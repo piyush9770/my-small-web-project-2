@@ -1,10 +1,24 @@
 const mongoose = require('mongoose');
-module.exports = mongoose.model('Idea', new mongoose.Schema({
-  title:String,
-  problem:String,
-  solution:String,
-  score:Number,
-  risk:String,
-  skillGap:String,
-  createdBy:{type:mongoose.Schema.Types.ObjectId, ref:'User'}
-}));
+
+const IdeaSchema = new mongoose.Schema({
+  title: String,
+  problem: String,
+  solution: String,
+
+  status: { type: String, default: 'Pending' },
+
+  adminReview: {
+    feedbackText: String,
+    strengths: [String],
+    improvements: [String],
+    suggestedSkills: [String],
+    readinessPercent: Number
+  },
+
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }
+});
+
+module.exports = mongoose.model('Idea', IdeaSchema);

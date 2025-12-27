@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Idea Analysis Result</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+
+  <!-- PAGE WRAPPER (IMPORTANT) -->
+  <div class="page">
+
+    <!-- TITLE -->
+    <h2>Idea Analysis Result</h2>
+
+    <!-- BASIC IDEA RESULT -->
+    <div class="card">
+      <p><b>Title:</b> <span id="title">—</span></p>
+      <p>
+        <b>Status:</b>
+        <span id="status" class="pending">Pending</span>
+      </p>
+    </div>
+
+    <!-- ADMIN REVIEW -->
+    <h3>Admin / Mentor Review</h3>
+
+    <div class="card">
+
+      <p><b>Feedback:</b></p>
+      <p id="r-feedback">—</p>
+
+      <p><b>Strengths:</b></p>
+      <ul id="r-strengths"></ul>
+
+      <p><b>Improvements:</b></p>
+      <ul id="r-improvements"></ul>
+
+      <p><b>Suggested Skills:</b></p>
+      <div id="r-skills"></div>
+
+      <p>
+        <b>Readiness:</b>
+        <span id="r-percent">0%</span>
+      </p>
+
+    </div>
+
+    <!-- BACK BUTTON -->
+    <div class="back">
+      <a href="dashboard.html">← Back to Dashboard</a>
+    </div>
+
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/config.js"></script>
+  <script src="js/result.js"></script>
+
+</body>
+</html>

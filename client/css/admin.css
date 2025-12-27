@@ -1,0 +1,185 @@
+/* ================= VARIABLES ================= */
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+  color: #e5e7eb;
+}
+
+/* ================= BACKGROUND ================= */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("./night-coding-workspace.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding: 1.6rem;
+}
+
+/* ================= HEADER ================= */
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+/* ================= INPUT / TEXTAREA ================= */
+input,
+textarea {
+  width: 100%;
+  padding: 0.65rem;
+  margin-bottom: 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.15);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: rgba(203, 213, 225, 0.75);
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgba(203, 213, 225, 0.75);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25), inset 0 0 0 1px rgba(56, 189, 248, 0.25);
+}
+
+textarea {
+  min-height: 90px;
+}
+
+/* ================= SELECT (STATUS / FILTER) ================= */
+select {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.65rem 0.8rem;
+  margin-bottom: 0.9rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: #e5e7eb;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.15);
+  transition: all 0.25s ease;
+}
+
+select:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+select:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25), inset 0 0 0 1px rgba(56, 189, 248, 0.25);
+}
+
+/* dropdown options */
+select option {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 14px;
+  padding: 1.4rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.8);
+}
+
+/* ================= CARD TEXT ================= */
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-bottom: 0.6rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.card b {
+  color: #93c5fd;
+}
+
+/* ================= SKILLS ================= */
+.skill-box {
+  margin-bottom: 1rem;
+}
+
+.skill-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  margin: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+.skill-btn:hover {
+  background: rgba(56, 189, 248, 0.25);
+  color: white;
+}
+.skill-btn.active {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: white;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  padding: 0.55rem 1.3rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+button:first-of-type {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+button:last-of-type {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  .card {
+    padding: 1.1rem;
+  }
+}

@@ -2,14 +2,34 @@
 <html>
 <head>
   <title>Submit Idea</title>
+  <link rel="stylesheet" href="css/submit.css">
 </head>
 <body>
-  <h2>Submit Idea</h2>
-  <input id="title" placeholder="Idea Title"><br>
-  <textarea id="problem" placeholder="Problem"></textarea><br>
-  <textarea id="solution" placeholder="Solution"></textarea><br>
-  <button onclick="submitIdea()">Submit</button>
 
+  <!-- Background -->
+  <div class="bg"></div>
+
+  <!-- Form Card -->
+  <main>
+    <h2>Submit Idea</h2>
+
+    <div class="field">
+      <input id="title" placeholder="Idea Title">
+    </div>
+
+    <div class="field">
+      <textarea id="problem" placeholder="Problem"></textarea>
+    </div>
+
+    <div class="field">
+      <textarea id="solution" placeholder="Solution"></textarea>
+    </div>
+
+    <button onclick="submitIdea()">Submit</button>
+  </main>
+
+  <script src="js/config.js"></script>
   <script src="js/idea.js"></script>
 </body>
 </html>
+

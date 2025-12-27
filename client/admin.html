@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<h2>Admin Panel – All User Ideas</h2>
+
+<label><b>Filter by User</b></label>
+<select id="userFilter" onchange="applyFilter()">
+  <option value="all">All Users</option>
+</select>
+
+<hr>
+
+<div id="adminIdeaList"></div>
+
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>

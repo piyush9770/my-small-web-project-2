@@ -1,9 +1,7 @@
-const API = 'http://localhost:5000/api';
-
 async function submitIdea() {
   const token = localStorage.getItem('token');
 
-  const res = await fetch(API + '/ideas', {
+  await fetch(API + '/ideas', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -16,6 +14,5 @@ async function submitIdea() {
     })
   });
 
-  const data = await res.json();
-  alert('Idea Score: ' + data.score);
+  location.href = 'dashboard.html';
 }

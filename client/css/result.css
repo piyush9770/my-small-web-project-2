@@ -1,0 +1,156 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+  color: #f1f5f9;
+}
+
+/* ================= BACKGROUND ================= */
+body {
+  position: relative;
+  padding: 2rem;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: url("./night-coding-workspace.jpg") no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(6px) scale(1.05);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(2, 6, 23, 0.55); /* 🔥 darker overlay */
+}
+
+/* ================= CONTAINER ================= */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ================= HEADINGS ================= */
+h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1.4rem;
+  color: #ffffff;
+}
+
+h3 {
+  margin: 2rem 0 1rem;
+  color: #60a5fa;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: rgba(15, 23, 42, 0.88); /* 🔥 more solid */
+  border-radius: 16px;
+  padding: 1.8rem;
+  margin-bottom: 1.8rem;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+/* ================= TEXT ================= */
+.card p {
+  margin-bottom: 0.9rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.card b {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+/* ================= LIST ================= */
+ul {
+  padding-left: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+  color: #e5e7eb;
+}
+
+/* ================= SKILLS ================= */
+#r-skills {
+  margin-top: 0.6rem;
+}
+
+#r-skills span {
+  display: inline-block;
+  padding: 7px 16px;
+  margin: 6px 6px 0 0;
+  border-radius: 999px;
+  font-size: 13px;
+  padding: 2px 3px;
+  background: rgba(59, 130, 246, 0.18);
+  border: 1px solid rgba(59, 130, 246, 0.45);
+  color: #1e0ab8;
+  font: bold;
+}
+
+/* ================= STATUS ================= */
+#status {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+#status.approved {
+  color: #22c55e;
+}
+
+#status.pending {
+  color: #facc15;
+}
+
+/* ================= BACK BUTTON ================= */
+.back {
+  margin-top: 2rem;
+}
+
+.back a {
+  display: inline-block;
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.7);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.3rem;
+  }
+}
