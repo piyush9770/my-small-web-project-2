@@ -1,2 +1,3 @@
 // client/js/config.js
-window.API = "http://localhost:5000/api";
+const API = "https://my-small-web-project-2.onrender.com/api";
+
