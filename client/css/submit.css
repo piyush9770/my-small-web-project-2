@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ================= VARIABLES ================= */
 /* ================= MIXINS ================= */
 /* ================= RESET ================= */
@@ -131,6 +132,7 @@ main:hover {
 /* ================= FINAL SUBMIT FORM ================= */
 main {
   width: 100%;
+  height: 100%;
   max-width: 760px; /* box wide */
   min-height: 540px; /* thodi height, full nahi */
   padding: 3.2rem;
@@ -185,7 +187,7 @@ main .field textarea {
 main button {
   width: 100%;
   height: 3.4rem;
-  margin-top: 1.6rem;
+  margin-top: -0.4rem;
   font-size: 1.1rem;
   font-weight: 600;
   color: white;
@@ -218,5 +220,46 @@ main button:hover {
   }
   main .field textarea {
     min-height: 210px;
+  }
+}
+/* ================= MOBILE FIX (<= 480px) ================= */
+@media (max-width: 480px) {
+  body {
+    align-items: center;
+    padding: 0.8rem;
+  }
+  main {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto; /* 🔥 fixed height remove */
+    height: auto;
+    padding: 1.6rem;
+    border-radius: 1.4rem;
+    transform: none !important;
+  }
+  main:hover {
+    transform: none;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.25), 0 15px 40px rgba(0, 0, 0, 0.85);
+  }
+  main h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+  }
+  /* inputs */
+  main .field input,
+  main .field textarea {
+    font-size: 1rem;
+    padding: 0.85rem;
+    border-radius: 0.9rem;
+  }
+  /* textareas mobile friendly */
+  main .field textarea {
+    min-height: 130px; /* 🔥 important */
+  }
+  /* button */
+  main button {
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 1.8rem;
   }
 }

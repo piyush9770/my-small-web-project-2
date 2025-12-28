@@ -232,23 +232,66 @@ button:active{
 /* -------- Mobile (<= 480px) -------- */
 @media (max-width: 480px) {
 
+ html, body {
+    width: 100%;
+    overflow-x: hidden;   
+  }
+
   main {
+
+    width: 24rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    position: relative;
+    gap: 1rem;
+  
+  
 
   #bro {
     width: 100%;
     font-size: 1.8rem;
     padding-top: 2rem;
   }
+   #bro{
+    width: 90%;               
+    max-width: 360px;      
+    margin: -2rem 11.3rem;
+    padding: 1.8rem 1.2rem;
+      margin-left: 12rem;
+      margin-top:8rem;
+     
+
+
+    h1{
+
+
+    font-size: 3rem;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    }
+  }
 
   #box {
-    width: 100%;
+    
+
+    height: auto;
+    max-height: 65vh;
     padding: 1.5rem;
     border-radius: 1.5rem;
     box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    right: -5rem;
+    bottom: 5rem;
+    scale: 1;
+    
+    
+
   }
 
   #box h1 {
@@ -281,5 +324,18 @@ button:active{
 
   #icon img {
     width: 35px;
+  }
+  }
+   main #box {
+    height: auto;
+    width: 109%;
+    max-height: 65vh;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    box-sizing: border-box;
+      right: -5.9rem;
+    bottom: 5rem;
+    scale: 1;
   }
 }

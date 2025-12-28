@@ -173,45 +173,87 @@ main #box:hover {
 }
 /* -------- Mobile (<= 480px) -------- */
 @media (max-width: 480px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
   main {
+    width: 24rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    gap: 1rem;
   }
-  #bro {
+  main #bro {
     width: 100%;
     font-size: 1.8rem;
     padding-top: 2rem;
   }
-  #box {
-    width: 100%;
+  main #bro {
+    width: 90%;
+    max-width: 360px;
+    margin: -2rem 11.3rem;
+    padding: 1.8rem 1.2rem;
+    margin-left: 12rem;
+    margin-top: 8rem;
+  }
+  main #bro h1 {
+    font-size: 3rem;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+  main #box {
+    height: auto;
+    max-height: 65vh;
     padding: 1.5rem;
     border-radius: 1.5rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    right: -5rem;
+    bottom: 5rem;
+    scale: 1;
   }
-  #box h1 {
+  main #box h1 {
     text-align: center;
   }
-  #box div:not(#icon):not(#check) input {
+  main #box div:not(#icon):not(#check) input {
     width: 100%;
     height: 2.3rem;
     font-size: 16px;
   }
-  #check {
+  main #check {
     align-items: center;
   }
-  #box button {
+  main #box button {
     width: 100%;
     font-size: 16px;
     padding: 12px 0;
   }
-  #icon {
+  main #icon {
     justify-content: center;
   }
-  .insta {
+  main .insta {
     font-size: 40px;
   }
-  #icon img {
+  main #icon img {
     width: 35px;
+  }
+  main #box {
+    height: auto;
+    width: 109%;
+    max-height: 65vh;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    right: -5.9rem;
+    bottom: 5rem;
+    scale: 1;
   }
 }
