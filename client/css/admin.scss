@@ -31,8 +31,9 @@ html, body{
 body{
   background:
     linear-gradient($overlay, $overlay),
-    url("./night-coding-workspace.jpg") no-repeat center center fixed;
+    url("./night-coding-workspace.jpg") no-repeat center center ;
   background-size: cover;
+   background-attachment: scroll;
   padding: 1.6rem;
 }
 
@@ -205,13 +206,112 @@ button:last-of-type{
   background: linear-gradient(135deg, #ef4444, #dc2626);
 }
 
-/* ================= MOBILE ================= */
+/* ================= ADMIN RESPONSIVE ================= */
+
+/* -------- Tablet (<= 992px) -------- */
+@media (max-width: 992px){
+
+  h2{
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  label{
+    text-align: center;
+  }
+
+  select{
+    max-width: 100%;
+  }
+
+  .card{
+    padding: 1.2rem;
+  }
+}
+
+/* -------- Tablet & Mobile (<= 768px) -------- */
 @media (max-width: 768px){
+
   body{
     padding: 1rem;
   }
 
-  .card{
-    padding: 1.1rem;
+  h2{
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
   }
+
+  select{
+    width: 100%;
+  }
+
+  .card{
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .skill-btn{
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  button{
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+/* -------- Mobile (<= 480px) -------- */
+@media (max-width: 480px){
+
+  h2{
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  label{
+    font-size: 0.9rem;
+  }
+
+  .card h3{
+    font-size: 1rem;
+  }
+
+  .card p{
+    font-size: 0.9rem;
+  }
+
+  .skill-btn{
+    font-size: 11px;
+    margin: 4px;
+  }
+
+  button{
+    font-size: 14px;
+    padding: 0.6rem;
+  }
+}
+
+body{
+  position: relative;
+  padding: 1.6rem;
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background: url("./night-coding-workspace.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+body::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background: rgba(0,0,0,0.15);
 }
