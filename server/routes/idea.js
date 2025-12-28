@@ -38,11 +38,4 @@ router.get('/:id', auth, async (req, res) => {
   res.json(idea);
 });
 
-// ================= USER DASHBOARD IDEAS =================
-router.get('/my', auth, async (req, res) => {
-  const ideas = await Idea.find({ createdBy: req.user.id });
-  res.json(ideas);
-});
-
-
 module.exports = router;
